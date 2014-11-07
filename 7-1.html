@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="gb2312">
+        <title>CSS3每日一练之选择器-状态伪类选择器[三] | 前端开发网(W3Cfuns.com)!</title>
+        <script type="text/javascript">
+        window.onload = function()
+        {
+            var rd1 = document.getElementById("radio1");
+            var rd2 = document.getElementById("radio2");
+            var tb = document.getElementById("textBox");
+                    
+            rd1.onclick = function()
+            {
+                tb.value = "状态：只读 | 前端开发网(W3Cfuns.com)!";
+                tb.readOnly = true;
+            }
+                
+            rd2.onclick = function()
+            {
+                tb.value = "状态：非只读 | 前端开发网(W3Cfuns.com)!";
+                tb.readOnly = false;
+            }
+        }
+        </script>
+        <style type="text/css">
+            *{margin:0; padding:0;}
+            body{margin-bottom:20px; font-size:14px;}
+            #content{margin:30px auto; padding:10px; width:300px; overflow:hidden;}
+            label{display:inline; margin-bottom:5px; width:150px; height:25px; line-height:25px; float:left;}
+            #textBox{display:block; width:300px; height:22px; line-height:22px; font-family:"Microsoft yahei"; outline:none;}
+            #textBox:read-only{border:1px solid #96c2f1; background:#eff7ff;}
+            #textBox:read-write{border:1px #eee solid; border-top:1px #d1d1d1 solid;}
+        </style>
+    </head>
+    <body>
+    <div id="content">
+        <label for="radio1"><input id="radio1" name="radio" type="radio" checked/>只读:read-only</label>
+        <label for="radio2"><input id="radio2" name="radio" type="radio"/>非只读:read-write</label>
+        <input id="textBox" type="text" value="状态：只读 | 前端开发网(W3Cfuns.com)!" readonly/>
+    </div>
+    </body>
+</html>

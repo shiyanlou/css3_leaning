@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="gb2312">
+        <title>CSS3每日一练之选择器-状态伪类选择器[二] | 前端开发网(W3Cfuns.com)!</title>
+        <script type="text/javascript">
+        window.onload = function()
+        {
+            var rd1 = document.getElementById("radio1");
+            var rd2 = document.getElementById("radio2");
+            var tb = document.getElementById("textBox");
+            
+            rd1.onclick = function()
+            {
+                tb.value = "状态：可用 | 前端开发网(W3Cfuns.com)!";
+                tb.disabled = false;
+            }
+                    
+             rd2.onclick = function()
+             {
+                 tb.value = "状态：不可用 | 前端开发网(W3Cfuns.com)!";
+                 tb.disabled = true;
+             }
+        }
+        </script>
+        <style type="text/css">
+            *{margin:0; padding:0;}
+            body{margin-bottom:20px; font-size:14px;}
+            #content{margin:30px auto; padding:10px; width:300px; overflow:hidden;}
+            label{display:inline; margin-bottom:5px; width:150px; height:25px; line-height:25px; float:left;}
+            #textBox{display:block; width:300px; height:22px; line-height:22px; font-family:"Microsoft yahei"; outline:none;}
+            #textBox:enabled{border:1px #eee solid; border-top:1px #d1d1d1 solid;}
+            #textBox:disabled{border:1px #999 solid; background:#efefef;}
+        </style>
+    </head>
+    
+    <body>
+        <div id="content">
+            <label for="radio1"><input id="radio1" name="radio" type="radio" checked/>可用:enabled</label>
+            <label for="radio2"><input id="radio2" name="radio" type="radio"/>不可用:disabled</label>
+            <input id="textBox" type="text" value="状态：可用 | 前端开发网(W3Cfuns.com)!"/>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="gb2312">
+        <title>CSS3每日一练之选择器-结构性伪类选择器[二] | 前端开发网(W3Cfuns.com)!</title>
+        <style type="text/css">
+                *{margin:0; padding:0;}
+                #list{font-family:"Microsoft yahei"; font-size:14px;}
+                #list li{width:300px; height:30px; line-height:30px; text-align:center; color:#fff; background:#000; list-style:none;}
+                #list li:nth-child(2){color:#000; background:#fff;}/*选择#list的第二个子元素li*/
+                #list li:nth-last-child(2){color:#666; background:#dfdfdf;}/*选择#list的倒数第二个子元素li*/
+        </style>
+    </head>
+    
+    <body>
+        <ul id="list">
+                <li>选项一 | 前端开发网(W3Cfuns.com)!</li>
+                <li>选项二 | 前端开发网(W3Cfuns.com)!</li>
+                <li>选项三 | 前端开发网(W3Cfuns.com)!</li>
+                <li>选项四 | 前端开发网(W3Cfuns.com)!</li>
+                <li>选项五 | 前端开发网(W3Cfuns.com)!</li>
+        </ul>
+    </body>
+</html>
